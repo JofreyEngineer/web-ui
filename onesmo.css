@@ -1,7 +1,5 @@
-form{ background-color: #7fffd4;
+h1{ background-color: brown;
      text-align: center;
-     display: flex;
-     justify-content: space-between;
-     
+     display: inline;
 
 }
