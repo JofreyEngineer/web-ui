@@ -36,14 +36,31 @@
      </div>
 
      <!-- Main content -->
-      <div class="flex-grow flex items-center justify-center">
-       <h1 class="text-xl"> <label for="username"></label><br>
-                             <input type="text" name="username" placeholder="username"><br>
-                             <label for="password"></label><br>
-                             <input type="password" name="password" placeholder="password"><br>
-                             <button>LOGIN</button>
-    </h1>
-      </div>
+     <div class="flex-grow flex items-center justify-center">
+        <form action="" class="border bg-white p-6 rounded-lg shadow-md w-1/4">
+            <h2 class="text-xl font-semibold text-center mb-4 text-gray-700">Login</h2>
+            
+            <div class="flex flex-col space-y-4">
+                <div class="flex flex-col">
+                    <label for="username" class="text-sm font-medium text-gray-600">Username</label>
+                    <input type="text" name="username" placeholder="Enter your username" 
+                        class="mt-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="password" class="text-sm font-medium text-gray-600">Password</label>
+                    <input type="password" name="password" placeholder="Enter your password"
+                        class="mt-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+        
+                <button type="submit" 
+                    class="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition duration-300">
+                    LOGIN
+                </button>
+            </div>
+        </form>
+    </div>
+    
 
       <!-- Footer -->
        <div class="border-t py-2 w-full mt-8">
