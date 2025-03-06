@@ -7,50 +7,52 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="flex">
-    <div class="w-1/4 border-r h-screen text-center">
-        <h1>DTB</h1>
-
-        <ul class="mt-8 flex flex-col space-y-4">
-            <li>
-                <i></i>
-                <h1>DASHBOARD</h1>
-            </li>
-            <li>
-                 <i></i>    
-                <h1>PAYMENTS</h1>  
-            </li>
-                 <i></i>
-            <li>
-                <H1>NOTIFICATIONS</H1>
-            </li>
-                 <i></i>
-            <li>
-                <H1>SETTINGS</H1>
-            </li>
-        </ul>
-    </div>
-    <div class="flex flex-col w-full">
-        <div class="border-b py-2 w-full mb-8">
-            <div class="container mx-auto">
-                <div class="flex justify-between items-center px-8">
-                    <div class="flex flex-col">
-                        <p>Greeting</p>
-                        <h1>User</h1>
-                    </div>
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-1/4 md:w-1/5 border-r h-screen text-center p-4">
+            <h1 class="text-xl font-bold">DTB</h1>
     
+            <ul class="mt-8 flex flex-col space-y-4 text-left">
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>DASHBOARD</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-wallet"></i>
+                    <span>PAYMENTS</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-bell"></i>
+                    <span>NOTIFICATIONS</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-cog"></i>
+                    <span>SETTINGS</span>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="flex flex-col w-full">
+            <!-- Header -->
+            <div class="border-b py-2 w-full mb-8 bg-gray-100">
+                <div class="container mx-auto px-8 flex justify-between items-center">
                     <div>
-                        profile
+                        <p class="text-gray-600">Greeting</p>
+                        <h1 class="text-lg font-semibold">User</h1>
+                    </div>
+                    <div>
+                        <i class="fas fa-user-circle text-2xl"></i> <!-- Profile Icon -->
                     </div>
                 </div>
-    
             </div>
-           </div>
-
-           <div>
-            Main content
-           </div>
+    
+            <!-- Main Content -->
+            <div class="p-8">
+                <h2 class="text-xl font-semibold">Main content</h2>
+            </div>
+        </div>
     </div>
-  </div>
+    
 </body>
 </html>
