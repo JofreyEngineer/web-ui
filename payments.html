@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-acenter mb-4">PAYMENTS</h2>
+        
+        <label class="block text-gray-700 font-medium">Select Payment Method you need</label>
+        <select id="payment-method" class="w-full border p-2 rounded mb-4">
+            <option value="bank">Bank Transfer</option>
+            <option value="mobile">Mobile Money</option>
+            <option value="card">Card Payment</option>
+        </select>
+        
+        <div id="payment-form"></div>
+        
+        <button id="pay-btn" class="w-full bg-red-600 text-white p-2 rounded mt-4">Proceed to Pay</button>
+    </div>
+    
+    <script>
+        document.getElementById("payment-method").addEventListener("change", function() {
+            let method = this.value;
+            let formContainer = document.getElementById("payment-form");
+            
+            if (method === "bank") {
+                formContainer.innerHTML = `
+                    <label class='block text-black font-medium'>Bank Name</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='Enter Bank Name'>
+                    <label class='block text-black font-medium'>Account Number</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='Enter Account Number'>
+                `;
+            } else if (method === "mobile") {
+                formContainer.innerHTML = `
+                    <label class='block text-black font-medium'>Mobile Network</label>
+                    <select class='w-full border p-2 rounded mb-2'>
+                        <option value='mpesa'>M-Pesa</option>
+                        <option value='airtel'>Airtel Money</option>
+                    </select>
+                    <label class='block text-black font-medium'>Phone Number</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='Enter Mobile Number'>
+                `;
+            } else if (method === "card") {
+                formContainer.innerHTML = `
+                    <label class='block text-black  font-medium'>Card Number</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='1234 5678 9012 3456'>
+                    <label class='block text-black font-medium'>Expiry Date</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='MM/YY'>
+                    <label class='block text-black font-medium'>CVV</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='123'>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
