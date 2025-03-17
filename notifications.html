@@ -3,22 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notifications - DTB Bank</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="home.html" rel="stylesheet">
-</head>
-<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <title>Document</title>
+    <link rel="stylesheet" href="payments.html">
+    <link rel="stylesheet" href="notifications.html">
+    <link rel="stylesheet" href="settings.html">
+    <link rel="stylesheet" href="confirmation.html">
+
+
     
-    <div class="bg-white p-8 shadow-lg rounded-lg text-center">
-        <h1 class="text-2xl font-bold text-black">Notifications</h1>
-        <p class=" text-black  mt-2">Check your latest updates here.</p>
+    
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+   
+</head> <div class="git commit -m"></div>
+<body>
+    <div class="flex text-white h-screen">
+        <!-- Sidebar -->
+         <div class="bg-red-600 w-1/5md:w-1/5git addd h-full-screen text-center p-4">
+            <h1 class="text-xl font-bold">DTB</h1>
+    
+            <ul class="mt-8 flex flex-col space-y-4 text-left">
+                <li class="flex items-center space-x-2">
+                    <i class=" fas fa-tachometer-alt"></i>
+                    <a href="jofu.html" class="hover:text-gray-200">DASHBOARD</a>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-wallet"></i>
+                    <a href="payments.html" class="hover:text-gray-200">PAYMENTS</a>
+                    
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-bell"></i>
+                    <a href="notifications.html" class="hover:text-gray-200">NOTIFICATIONS</a>
+
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="settings.html" class="hover:text-gray-200">SETTINGS</a>
+
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="flex flex-col w-full">
+            <!-- Header -->
+            <div class="bg-red-600 border-b py-2 w-full mb-8 bg-gray-100">
+                <div class="px-8 flex justify-between items-center">
+                    <div>
+                        <h1 class="text-lg font-semibold">USER</h1>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-user text-2xl" ></i> <!-- Profile Icon -->
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Main Content -->
+            <div class=" text-black flex justify-center items-center">
+                <div class="w-1/2 mx-auto bg-white p-6 rounded-lg shadow-md">
+                    
+                    <div class="bg-white p-8 shadow-lg rounded-lg text-center">
+                        <h1 class="text-2xl font-bold text-black">Notifications</h1>
+                        <p class=" text-black  mt-2">Check your latest updates here.</p>
+                        
+                        <div class="mt-6">
+                            <a href="home.html" class="bg-red-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-700 transition">
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
         
-        <div class="mt-6">
-            <a href="home.html" class="bg-red-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-700 transition">
-                Back to Home
-            </a>
+            </div>
+            
+           </div>
+            
         </div>
     </div>
 
+    <script>
+        document.getElementById("payment-method").addEventListener("change", function() {
+            let method = this.value;
+            let formContainer = document.getElementById("payment-form");
+            
+            if (method === "bank") {
+                formContainer.innerHTML = `
+                    <label class='block text-black font-medium'>Bank Name</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='Enter Bank Name'>
+                    <label class='block text-black font-medium'>Account Number</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='Enter Account Number'>
+                `;
+            } else if (method === "mobile") {
+                formContainer.innerHTML = `
+                    <label class='block text-black font-medium'>Mobile Network</label>
+                    <select class='w-full border p-2 rounded mb-2'>
+                        <option value='mpesa'>M-Pesa</option>
+                        <option value='airtel'>Airtel Money</option>
+                    </select>
+                    <label class='block text-black font-medium'>Phone Number</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='Enter Mobile Number'>
+                `;
+            } else if (method === "card") {
+                formContainer.innerHTML = `
+                    <label class='block text-black  font-medium'>Card Number</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='1234 5678 9012 3456'>
+                    <label class='block text-black font-medium'>Expiry Date</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='MM/YY'>
+                    <label class='block text-black font-medium'>CVV</label>
+                    <input type='text' class='w-full border p-2 rounded mb-2' placeholder='123'>
+                `;
+            }
+        });
+      
+    document.getElementById("pay-btn").addEventListener("click", function() {
+        alert("Processing your payment...");
+        window.location.href = "confirmation.html"; 
+    });
+
+
+    </script>   
 </body>
 </html>
