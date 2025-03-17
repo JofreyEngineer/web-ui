@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="payments.html">
+
+    
+    
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+   
+</head> <div class="git commit -m"></div>
+<body>
+    <div class="flex text-white">
+        <!-- Sidebar -->
+         <div class="bg-red-600 w-1/5md:w-1/5git addd h-full-screen text-center p-4">
+            <h1 class="text-xl font-bold">DTB</h1>
+    
+            <ul class="mt-8 flex flex-col space-y-4 text-left">
+                <li class="flex items-center space-x-2">
+                    <i class=" fas fa-tachometer-alt"></i>
+                    <a href="jofu.html" class="hover:text-gray-200">DASHBOARD</a>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-wallet"></i>
+                    <a href="payments.html" class="hover:text-gray-200">PAYMENTS</a>
+                    
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fas fa-bell"></i>
+                    <a href="notifications.html" class="hover:text-gray-200">NOTIFICATIONS</a>
+
+                </li>
+                <li class="flex items-center space-x-2">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="settings.html" class="hover:text-gray-200">SETTINGS</a>
+
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="flex flex-col w-full">
+            <!-- Header -->
+            <div class="bg-red-600 border-b py-2 w-full mb-8 bg-gray-100">
+                <div class="px-8 flex justify-between items-center">
+                    <div>
+                        <h1 class="text-lg font-semibold">USER</h1>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-user text-2xl" ></i> <!-- Profile Icon -->
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Main Content -->
+            <div class=" text-black flex justify-center items-center">
+                <h2 class="text-2xl font-semibold text-center">WELCOME TO DTB BANK OF TANZANIA</h2>
+            </div>
+            
+                <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+                    <!-- Box 1: Account Balance -->
+                    <div class="border- rounded-md p-6 shadow-md rounded-lg text-center border">
+                        <h3 class="text-lg font-semibold text-black">Account Balance</h3>
+                        <p class="text-2xl font-bold text-black">TZS100000</p>
+                    </div>
+            
+                    <!-- Box 2: Recent Transactions -->
+                    <div class="border- rounded-md p-6 shadow-md rounded-lg text-center border">
+                        <h3 class="text-lg font-semibold  text-black">Recent Transactions</h3>
+                        <p class="text-xl font-bold text-black">10</p>
+                    </div>
+            
+                    <!-- Box 3: Loan Status -->
+                    <div class="border- rounded-md p-6 rounded-lg text-center border">
+                        <h3 class="text-lg font-semibold text-black">Loan Status</h3>
+                        <p class="text-xl font-bold text-black">70000</p>
+                    </div>
+            
+                    <!-- Box 4: Notifications -->
+                    <div class="border- rounded-md p-6 shadow-md rounded-lg text-center border">
+                        <h3 class="text-lg font-semibold text-black">Notifications</h3>
+                        <p class="text-xl font-bold text-black">1 New</p>
+                    </div>
+                
+                </div>
+                    <div class="flex justify-center">
+                        <canvas id="myChart"></canvas>
+                    </div>
+            </div>
+            
+           </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: [ 'January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+              label: '#results',
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor: [ 'purple'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+      </script>      
+</body>
+</html>

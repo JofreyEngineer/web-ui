@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <link rel="stylesheet" href="main.js">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+     <div class="border-b py-2 w-full mb-8">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div>
+                    <img src="logo.png" alt="logo" width="85" height="85" class="object-cover">
+                </div>
+    
+                <div class="flex space-x-4">
+                    <select name="Language" id="themes">
+                        <option value="themes" selected>Language</option>
+                        <option value="swahili">Swahili</option>
+                        <option value="english">English</option>
+                        
+                     </select>
+                    <!-- <h1>Themes</h1> -->
+                     <select name="themes" id="themes">
+                        <option value="themes" selected>Theme</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                     </select>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Main content -->
+     <div class="flex-grow flex items-center justify-center">
+        <form action="" class="border bg-white p-6 rounded-lg shadow-md w-3/4 md:w-1/4 dark:bg-gray-900">
+            <h2 class="text-xl font-semibold text-center mb-4 text-red-700">SIGN UP</h2>
+            
+            <div class="flex flex-col space-y-4">
+                <div class="flex flex-col">
+                    <label for="username" class="text-sm font-medium text-red-600">Username</label>
+                    <input type="text" name="username" placeholder="Enter your username" 
+                        class="mt-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="password" class="text-sm font-medium text-red-600">Password</label>
+                    <input type="password" name="password" placeholder="Enter your password"
+                        class="mt-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+        
+                <a href="/home.html">
+                    <button type="button" 
+                        class="w-full bg-red-600 text-white py-2 rounded-md hover:bg-gray-100 transition duration-300">
+                        LOGIN
+                    </button>
+                </a>
+            </div>
+        </form>
+    </div>
+    
+
+      <!-- Footer -->
+       <div class="border-t py-2 w-full mt-8">
+            <h3 class="text-xs text-center">2025 dtb. all right reserved</h3>
+       </div>
+    </div>
+<script src="main.js"></script>
+</body>
+
+</html>
